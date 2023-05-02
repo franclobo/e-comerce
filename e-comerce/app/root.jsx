@@ -9,8 +9,15 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import styles from "./styles/tailwind.css";
+
 export const links = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: styles },
+];
+
+export const meta = () => [
+  { title: "E-comerce", charset: "utf-8" },
 ];
 
 export default function App() {
